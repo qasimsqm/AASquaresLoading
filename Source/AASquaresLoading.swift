@@ -140,7 +140,7 @@ open class AASquaresLoading : UIView, AASquareLoadingInterface, CAAnimationDeleg
     if (parentView != nil) {
       self.layer.opacity = 0
       self.parentView!.addSubview(self)
-      UIView.animate(withDuration: 0.6, delay: delay, options: UIViewAnimationOptions(),
+      UIView.animate(withDuration: 0.6, delay: delay, options: UIView.AnimationOptions(),
         animations: { () -> Void in
           self.layer.opacity = 1
         }, completion: nil)
@@ -155,7 +155,7 @@ open class AASquaresLoading : UIView, AASquareLoadingInterface, CAAnimationDeleg
   open func stop(_ delay : TimeInterval = 0.0) {
     if (parentView != nil) {
       self.layer.opacity = 1
-      UIView.animate(withDuration: 0.6, delay: delay, options: UIViewAnimationOptions(),
+      UIView.animate(withDuration: 0.6, delay: delay, options: UIView.AnimationOptions(),
         animations: { () -> Void in
           self.layer.opacity = 0
         }, completion: { (success: Bool) -> Void in
